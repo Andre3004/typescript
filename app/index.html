@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seriado</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+
+<body class="container">
+
+    <h1 class="text-center">Acompanhamento de series</h1>
+
+    <div id="mensagemView"></div>
+
+    <form class="form" id="form">
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input id="nome" class="form-control" required autofocus />
+        </div>
+
+        <div class="form-group">
+            <label for="nota">Nota</label>
+            <input type="number" min="0" max="5" id="nota" class="form-control" value="1" required />
+        </div>
+
+
+        <div class="form-group">
+            <label for="Tipo">Tipo</label>
+            <select id="tipo"  class="form-control form-control-lg">
+
+                <option value="Fantasia">Fantasia</option>
+                <option value="Drama">Drama</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Policial">Policial</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Crime">Crime</option>
+                <option value="Terror">Terror</option>
+
+            </select>
+        </div>
+        <br>
+
+        <button class="btn btn-primary" id="salvar" type="button">Salvar</button>
+    </form>
+
+    <br>
+    <br>
+
+    <div id="seriesView"></div>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/system.js"></script>
+    <script>
+        System.defaultJSExtensions = true;
+        System.import('js/app.js').catch(err => console.error(err));
+    </script>
+</body>
+
+</html>
